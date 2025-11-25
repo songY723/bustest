@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 360px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 4px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 10px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="loginForm">
+    <h2>로그인</h2>
+
+    <label>아이디</label>
+    <input type="text" id="username" required>
+
+    <label>비밀번호</label>
+    <input type="password" id="password" required>
+
+    <button type="submit">로그인</button>
+    <p id="result"></p>
+  </form>
+
+  <!-- 🔥 외부 JS 파일 -->
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bus-icon {
+    font-size: 24px;
+  }
+
+  .header-title {
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .header-right {
+    width: 100px;
+    text-align: right;
+  }
+
+  .login-btn {
+    background: white;
+    color: #1976d2;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .login-btn:hover {
+    background: #e3f2fd;
+  }
+</style>
+<body>
+<header>
+  <div class="header-left">
+    <div class="bus-icon">🚌</div>
+    <div class="header-title" onclick="location.href='/routes.html'">BusTraker</div>
+  </div>
+
+  <div class="header-right">
+    <!-- 로그인 전 -->
+    <button id="loginBtn" class="header-btn" onclick="location.href='/login.html'">로그인</button>
+    <button id="registerBtn" class="header-btn" onclick="location.href='/register.html'">회원가입</button>
+
+    <!-- 로그인 후 -->
+    <span id="usernameText" style="display:none; font-weight:bold; font-size:16px; margin-right:10px;"></span>
+    <button id="logoutBtn" class="header-btn" style="display:none;">로그아웃</button>
+  </div>
+</header>
+
+<script src="/js/header.js"></script>
+</body>
+</html>
